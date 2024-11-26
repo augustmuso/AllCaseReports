@@ -1,0 +1,105 @@
+\documentclass[
+                aspectratio=169, 
+                14pt,
+                % notes,
+                % notes=only,
+                ]{beamer}
+
+
+\usepackage{../../1_CasesDB/Common/slidePreamble}
+
+
+
+
+% Usage example
+\title[Short Form Title]{
+  Long Form Title
+  }
+% \subtitle{A Study Conducted in 2023}
+
+\author[author 1 \and author 2]{ author 1 \and author 2}
+
+% \institute{Makerere University}
+
+\date{\footnotesize Host Of Conference\\ Anual General Meeting\\ \today}
+
+
+
+
+
+\begin{document}
+
+\begin{frame}[shrink=20]
+    \titlepage
+\end{frame}
+
+% \begin{frame}[shrink=20]{Table Of  Contents}
+
+%     % \footnotesize
+%     % \scriptsize
+%     % \tiny
+%     % \small
+%     % \begin{multicols}{2}
+%     \tableofcontents
+%     % \end{multicols}
+
+% \end{frame}
+
+\begin{frame}[shrink=40]{Abbreviations \& Operational Definitions}
+
+    % \footnotesize
+    % \scriptsize
+    % \tiny
+    % \small
+    \begin{multicols}{2}
+    \printglossary[type=\acronymtype, title=Keywords]
+
+    \printglossary[title=Operational Definitions]
+
+    \end{multicols}
+
+\end{frame}
+
+
+\input{sections/1_intro.tex}
+
+\input{sections/2_PatientInformation.tex}
+
+\input{sections/3_ClinicalFindings}
+
+\input{sections/4_Timeline}
+
+\input{sections/5_DiagnosticAssessment}
+
+% \input{sections/6_TherapeuticIntervention}
+
+% \input{sections/7_FollowupandOutcomes}
+
+% \input{sections/8_Discussion}
+
+% \input{sections/9_PatientsPerspective}
+
+% \input{sections/10_InformedConsent}
+
+          
+\begin{frame}{References}
+\printbibliography
+  
+\end{frame}
+
+
+% \input{../../Common/slidesSections/End Sessions/End Sessions}
+% Add more sections and subsections as needed
+
+
+% \input{../../Common/slidesSections/End Sessions/Standards.tex}
+
+
+% \input{../../Common/slidesSections/End Sessions/OSH.tex}
+
+
+
+
+
+
+\end{document}

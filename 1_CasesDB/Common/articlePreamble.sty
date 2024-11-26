@@ -1,0 +1,53 @@
+
+% Research Proposal size standard 
+\usepackage{geometry}
+\geometry{
+    a4paper, margin=2.5cm
+}
+
+%----------------------------------------------------------
+%           glossaries and acronyms
+%----------------------------------------------------------
+\usepackage[automake,toc,acronym, section=section]{glossaries}
+
+\makeglossaries
+\input{../1_CasesDB/Common/glossary}
+
+\renewcommand*{\glstextformat}[1]{\textbf{#1}} % Redefine appearance of acronyms as keywords
+
+
+%----------------------------------------------------------
+%           citing and referencing
+%----------------------------------------------------------
+
+% citing and referencing
+%% APA bibliography styles
+%%%%%%%%%%%%%%%%%%%%%%%
+%% To change the style, put a % in front of the second line of the current style and
+%% remove the % from the second line of the style you would like to use.
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa, backend = biber]{biblatex}
+\bibliography{references/ref.bib}
+
+%----------------------------------------------------------
+%           Figures and Tables
+%----------------------------------------------------------
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+% GRAPHICS
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{positioning}
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm,compat=1.3}
+\usepackage{multirow}
+\usepackage{float} 
+\usepackage{booktabs} % for tables
+\usepackage{tabularx} % for tables
+\usepackage{newtx} % times new roman
+\usepackage{siunitx} % UNITS
+% \usepackage{hyperref} % For hyperlinks
+\usepackage{pgfgantt} % for creating gantt timeline charts
+
+

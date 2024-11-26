@@ -1,0 +1,178 @@
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage{multicol}
+
+%----------------------------------------------------------
+%           Presentation mode
+%----------------------------------------------------------
+
+\usepackage{pgfpages}
+% \setbeameroption{show notes}
+% \setbeameroption{show notes on second screen=right}
+
+%----------------------------------------------------------
+%           for handouts
+%----------------------------------------------------------
+
+% \usepackage{pgfpages}
+% \pgfpagesuselayout{6 on 1}[border shrink=1mm]
+% \pgfpageslogicalpageoptions{1}{border code=\pgfsetlinewidth{3pt}\pgfusepath{stroke}}
+% \pgfpageslogicalpageoptions{2}{border code=\pgfsetlinewidth{3pt}\pgfusepath{stroke}}
+% \pgfpageslogicalpageoptions{3}{border code=\pgfsetlinewidth{3pt}\pgfusepath{stroke}}
+% \pgfpageslogicalpageoptions{4}{border code=\pgfsetlinewidth{3pt}\pgfusepath{stroke}}
+% \pgfpageslogicalpageoptions{5}{border code=\pgfsetlinewidth{3pt}\pgfusepath{stroke}}
+% \pgfpageslogicalpageoptions{6}{border code=\pgfsetlinewidth{3pt}\pgfusepath{stroke}}
+
+%----------------------------------------------------------
+%           citing and referencing
+%----------------------------------------------------------
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tabularx}
+
+% UNITS
+\usepackage{siunitx}
+
+%----------------------------------------------------------
+%           citing and referencing
+%----------------------------------------------------------
+
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=apa, backend=biber]{biblatex}
+\bibliography{../references/ref.bib}
+
+
+% Required package
+\usepackage{tikz}
+\usepackage{pgf-pie}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+%----------------------------------------------------------
+%           Optocase Group logo
+%----------------------------------------------------------
+
+% % Add Optocase Group logo to every frame
+% \logo{\includegraphics[width=1.5cm]{images/optocase_logo.png}}
+
+% Embed logo in background
+% \setbeamertemplate{background}{
+%     \begin{tikzpicture}[remember picture,overlay]
+%         \node[opacity=0.015] at (current page.center) {\includegraphics[width=8cm]{images/optocase_logo.png}};
+%     \end{tikzpicture}
+% }
+
+%----------------------------------------------------------
+%           Removes navigation symbols
+%----------------------------------------------------------
+
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{navigation symbols}{}
+
+%----------------------------------------------------------
+%           glossaries and acronyms
+%----------------------------------------------------------
+\usepackage[automake,toc,acronym]{glossaries}
+
+\makeglossaries
+\input{../../1_CasesDB/Common/glossary}
+
+
+\renewcommand*{\glstextformat}[1]{\textbf{#1}} % Redefine appearance of acronyms as keywords
+
+%----------------------------------------------------------
+%           Theme Setter
+%----------------------------------------------------------
+
+\usetheme[width=3.8em]{Hannover}
+% \usetheme[width=3.8em]{Marburg}
+% \usetheme[width=3.8em]{Goettingen}
+
+%----------------------------------------------------------
+%           Colour Setup
+%----------------------------------------------------------
+
+\usepackage{xcolor}
+\usepackage{colortbl}
+
+% Define Optocase Group colors
+\definecolor{optocaseblue}{RGB}{0,102,204}
+\definecolor{LapaireBlue}{RGB}{35, 165, 223}
+\definecolor{optocasegray}{RGB}{128,128,128}
+\definecolor{myRed}{RGB}{163, 10, 53}
+\definecolor{myOrange}{RGB}{254, 190, 16}
+\definecolor{lightgray}{gray}{0.9}
+\definecolor{lightblue}{rgb}{0.8, 0.85, 1}
+\definecolor{lightgreen}{rgb}{0.85, 1, 0.85}
+\definecolor{OAUcolor}{RGB}{14, 87, 135}
+
+\setbeamertemplate{sidebar canvas left}[vertical shading][top=OAUcolor, middle=OAUcolor!85, bottom=OAUcolor]
+\setbeamercolor*{structure}{bg=myOrange,fg=OAUcolor}
+
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
+\setbeamercolor*{palette secondary}{use=structure,fg=OAUcolor,bg=myOrange}
+\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=OAUcolor}
+
+\setbeamercolor{frametitle}{bg=white,fg=black}
+\setbeamercolor*{titlelike}{parent=palette primary}
+
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{subsection in toc}{fg=black}
+
+\setbeamercolor{title in sidebar}{fg=white!75}
+\setbeamercolor{author in sidebar}{fg=white!50}
+\setbeamercolor{palette sidebar secondary}{fg=OAUcolor,bg=white!80}
+\setbeamercolor{subsection in sidebar}{fg=OAUcolor,bg=white!80}
+\setbeamercolor{section in sidebar shaded}{fg=white!75}
+\setbeamercolor{subsection in sidebar shaded}{fg=white!75}
+
+%---------------------------------------------------------
+%	SELECT FONT THEME & FONTS
+%---------------------------------------------------------
+
+\usefonttheme{serif}
+% \usepackage{mathptmx}
+\usepackage{fontenc}
+\usepackage{ebgaramond}
+
+\setbeamerfont{frametitle}{size=\large}
+\setbeamerfont{author}{size=\small}
+\setbeamerfont{institute}{size=\small}
+
+\setbeamertemplate{title page}{
+  \begin{minipage}[b][\paperheight]{\textwidth}
+    \vfill%
+    \ifx\inserttitle\@empty\else\usebeamertemplate*{title}\fi
+    \ifx\insertsubtitle\@empty\else\usebeamertemplate*{subtitle}\fi
+    \usebeamertemplate*{title separator}
+    \ifx\beamer@shortauthor\@empty\else\usebeamertemplate*{author}\fi
+    \ifx\insertdate\@empty\else\usebeamertemplate*{date}\fi
+    \ifx\insertinstitute\@empty\else\usebeamertemplate*{institute}\fi
+    \vfill
+    \vspace*{1mm}
+  \end{minipage}
+}
+
+\newcommand{\supervisor}[2][]{%
+    \par\smallskip\textbf{Supervisor #1:} \small #2\par\smallskip
+}
+
+
+
+%---------------------------------------------------------
+%	Setting the Institution Logo
+%---------------------------------------------------------
+
+% Uncomment and complete the logo code if necessary
+% \addtobeamertemplate{sidebar left}{%
+%     \hspace*{.0em}{\transparent{0.5}\includegraphics[width=0.21\textwidth]{images/laplogo.png}}%
+% }
+
+% for tables
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage[utf8]{inputenc}
+\usepackage{bookmark}

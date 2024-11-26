@@ -1,0 +1,31 @@
+\begin{figure}[htbp]
+    \centering
+    \resizebox{.6\textwidth}{!}{%
+        \begin{tikzpicture}
+            \begin{axis}[
+                xlabel={Time (months)},
+                ylabel={Visual Acuity (VA)},
+                xmin=0, xmax=12,
+                ymin=0, ymax=100,
+                xtick={0,2,4,6,8,10,12},
+                ytick={0,20,40,60,80,100},
+                legend pos=north west,
+                grid style=dashed,
+            ]
+            
+            \addplot[
+                color=blue,
+                mark=square,
+            ]
+            coordinates {
+                (0,80)(1,75)(2,70)(3,65)(4,60)(5,55)(6,50)(7,45)(8,40)(9,35)(10,30)(11,25)(12,20)
+            };
+            
+            \legend{Visual Acuity}
+            
+            \end{axis}
+        \end{tikzpicture}
+    }
+    \caption{Visual Acuity Over Time}
+    \label{fig:va_graph}
+\end{figure}
